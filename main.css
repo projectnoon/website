@@ -427,9 +427,9 @@ input[type="search"] {
 }
 
 /******************************************************************************
-  Red: rgb(224,22,43)     #E0162B
-  Blue: rgb(0,82,165)     #0052A5
-  White: rgb(255,255,255) #FFFFFF
+  background: #202729
+  orange: #e69138
+  green: #63d297
 ******************************************************************************/
 
 .page {}
@@ -450,15 +450,21 @@ input[type="search"] {
 
 .btn {
   border-radius: 0.5rem;
+  border: 0;
   cursor: pointer;
   display: block;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 1rem 0;
+  text-transform: uppercase;
   width: 100%;
 }
 
 /* --- Intro -------------- */
 
 .section--intro {
-  background-color: #0052A5;
+  background-color: #202729;
   color: #FFFFFF;
 }
 
@@ -475,8 +481,8 @@ input[type="search"] {
 /* --- Instructions ------ */
 
 .section--instructions {
-  background-color: #FFFFFF;
-  color: #333333;
+  background-color: #63d297;
+  color: #202729;
 }
 
 .section--instructions .steps {
@@ -485,19 +491,16 @@ input[type="search"] {
 
 .section--instructions .step {
   background-color: #FFFFFF;
-  border-bottom: 0.5rem solid #0052A5;
-  color: #0052A5;
+  color: #e69138;
   margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
-}
-
-.section--instructions .step:last-child {
-  border-bottom: 0;
+  padding: 1rem 3vw;
+  border-radius: 0.5rem;
 }
 
 .section--instructions .step__number {
-  background-color: #0052A5;
+  background-color: #e69138;
   border-radius: 50%;
   color: #FFFFFF;
   float: left;
@@ -519,8 +522,12 @@ input[type="search"] {
   clear: both;
 }
 
+.section--instructions .step__action {
+  margin-bottom: 0;
+}
+
 .section--instructions .step__action .btn {
-  background-color: #0052A5;
+  background-color: #e69138;
   color: #FFFFFF;
 }
 
@@ -547,7 +554,7 @@ input[type="search"] {
 /* --- Ideas ------------- */
 
 .section--ideas {
-  background-color: #E0162B;
+  background-color: #202729;
   color: #FFFFFF;
 }
 
@@ -576,7 +583,7 @@ input[type="search"] {
 }
 
 .section--ideas .btn {
-  background-color: #E0162B;
+  background-color: #63d297;
   color: #FFFFFF;
 }
 
