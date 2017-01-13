@@ -616,6 +616,15 @@ input[type="search"] {
   display: block;
   padding: 0;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+}
+
+.section--ideas .organization__link {
+  display: block;
+  text-decoration: none;
 }
 
 .section--ideas .organization__issue {
@@ -626,11 +635,6 @@ input[type="search"] {
   font-size: 5vh;
   cursor: pointer;
   margin-bottom: 0;
-}
-
-.section--ideas .organization__link {
-  display: block;
-  text-decoration: none;
 }
 
 .section--ideas .organization__name {
@@ -651,6 +655,7 @@ input[type="search"] {
 .section--ideas .organization__cta {
   margin-bottom: 0;
   padding: 1rem;
+  align-self: stretch;
 }
 
 .section--ideas .organization__cta .btn {
@@ -669,4 +674,21 @@ input[type="search"] {
 
 .section--ideas .organization__link:hover .organization__cta .btn {
   background-color: rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+  .section--ideas .organizations {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .section--ideas .organization {
+    width: 40%;
+  }
+
+  .section--ideas .organization:nth-child(2n+1) {
+    clear: both;
+  }
 }
