@@ -438,7 +438,7 @@ input[type="search"] {
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: stretch;
   min-height: 100vh;
   width: 100%;
 }
@@ -448,19 +448,6 @@ input[type="search"] {
   text-align: center;
 }
 
-.btn {
-  border-radius: 0.5rem;
-  border: 0;
-  cursor: pointer;
-  display: block;
-  font-size: 1.5rem;
-  line-height: 1;
-  margin: 0 auto;
-  padding: 1rem 0;
-  text-transform: uppercase;
-  width: 100%;
-}
-
 /* --- Intro -------------- */
 
 .section--intro {
@@ -468,86 +455,129 @@ input[type="search"] {
   color: #FFFFFF;
 }
 
-.section--intro h1 {
-  font-size: 2rem;
-}
-
-.section--intro p {
-  margin: 0;
-  padding: 1rem 5vw;
-  text-align: center;
-}
-
-/* --- Instructions ------ */
-
-.section--instructions {
+.section--intro .section__header {
   background-color: #63d297;
   color: #202729;
+  font-size: 10vw;
+  height: 44vh;
+  line-height: 44vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-.section--instructions .steps {
-  padding: 0 5vw 1rem;
+.section--intro .section__text {
+  color: #e69138;
+  font-size: 1rem;
+  height: 12vh;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.5rem 10vw;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.section--instructions .step {
+.section--intro .section__subheader {
+  color: #e69138;
+  font-size: 8vw;
+  height: 44vh;
+  line-height: 44vh;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 490px) {
+  .section--intro .section__header {
+    height: 45vh;
+    line-height: 45vh;
+  }
+
+  .section--intro .section__text {
+    font-size: 3vw;
+    height: 10vh;
+    line-height: 10vh;
+    padding: 0 5vw;
+  }
+
+  .section--intro .section__subheader {
+    height: 45vh;
+    line-height: 45vh;
+  }
+}
+
+
+/* --- Actions --------------------- */
+
+.section--actions {
+  background-color: #202729;
+  color: #ffffff;
+  min-height: auto;
+}
+
+.section--actions .actions {
+  background-color: rgba(0, 0, 0, 0.2);
+  list-style: none;
+  margin: 0;
+  min-height: 50vh;
+  padding: 6rem 5vw 4rem;
+  width: 100%;
+}
+
+.section--actions .action {
   background-color: #FFFFFF;
   color: #e69138;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  position: relative;
-  padding: 1rem 3vw;
-  border-radius: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-.section--instructions .step__number {
-  background-color: #e69138;
-  border-radius: 50%;
-  color: #FFFFFF;
-  float: left;
-  font-size: 2rem;
-  height: 3rem;
-  line-height: 3rem;
+.section--actions .action__callout,
+.section--actions .action__details {
+  display: block;
   text-align: center;
-  width: 3rem;
+  width: 100%;
 }
 
-.section--instructions .step__title {
-  float: left;
-  font-size: 2rem;
-  line-height: 3rem;
-  padding-left: 0.75rem;
-}
-
-.section--instructions .step__summary {
-  clear: both;
-}
-
-.section--instructions .step__action {
-  margin-bottom: 0;
-}
-
-.section--instructions .step__action .btn {
+.section--actions .action__callout {
   background-color: #e69138;
   color: #FFFFFF;
+  font-size: 2rem;
+  line-height: 2rem;
+  min-height: 4rem;
+  padding: 1rem 1vw;
 }
 
-@media (min-width: 768px) {
-  .section--instructions .steps {
-    position: relative;
+.section--actions .action__details {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1rem 5vw;
+}
+
+@media (min-width: 1100px) {
+  .section--actions .action {
+    background-color: #e69138;
+    min-height: 4rem;
     overflow: hidden;
-    padding: 0;
+    position: relative;
   }
 
-  .section--instructions .step {
-    display: block;
+  .section--actions .action__callout,
+  .section--actions .action__details {
     float: left;
-    width: 50%;
-    border-bottom: 0;
-    padding: 1rem 5vw;
   }
 
-  .section--instructions .step:nth-child(2n + 1) {
-    clear: both;
+  .section--actions .action__callout {
+    line-height: 4rem;
+    min-height: 6rem;
+    text-align: right;
+    width: 25vw;
+  }
+
+  .section--actions .action__details {
+    background-color: #ffffff;
+    padding: 1rem 1vw;
+    text-align: left;
+    width: 65vw;
   }
 }
 
@@ -558,59 +588,85 @@ input[type="search"] {
   color: #FFFFFF;
 }
 
+.section--ideas .section__header {
+  color: #e69138;
+  font-size: 1.5rem;
+  padding: 3rem 5vh;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .section--ideas .section__header {
+    font-size: 4vw;
+    height: 25vh;
+  }
+}
+
 .section--ideas .organizations {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .section--ideas .organization {
-  background-color: #FFFFFF;
-  color: #333333;
-  margin: 0 5vw 1rem;
-  overflow: hidden;
-  position: relative;
+  background-color: #63d297;
   display: block;
-  padding: 1rem 5vw;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.section--ideas .organization__issue {
+  background-color: rgba(0,0,0,0.2);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5vh;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.section--ideas .organization__link {
+  display: block;
   text-decoration: none;
 }
 
-.section--ideas .organization__issue {}
-
 .section--ideas .organization__name {
+  color: #ffffff;
   font-size: 1.5rem;
+  line-height: 1.2;
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 0;
 }
 
 .section--ideas .organization__description {
+  color: #ffffff;
   font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
 }
 
-.section--ideas .btn {
-  background-color: #63d297;
-  color: #FFFFFF;
+.section--ideas .organization__cta {
+  margin-bottom: 0;
+  padding: 1rem;
 }
 
-@media (min-width: 768px) {
-  .section--ideas .organizations {
-    position: relative;
-    overflow: hidden;
-    padding: 0 2.5vw 1rem;
-    margin: 0;
-  }
+.section--ideas .organization__cta .btn {
+  background-color: rgba(255,255,255,0.2);
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+}
 
-  .section--ideas .organization {
-    display: block;
-    float: left;
-    width: 45vw;
-    border-bottom: 0;
-    padding: 1rem 2.5vw;
-    margin: 0;
-    min-height: 300px;
-  }
-
-  .section--ideas .organization:nth-child(2n) {
-    margin-left: 0;
-  }
-
-  .section--ideas .organization:nth-child(2n + 1) {
-    clear: both;
-    margin-right: 0;
-  }
+.section--ideas .organization__link:hover .organization__cta .btn {
+  background-color: rgba(0,0,0,0.2);
 }
