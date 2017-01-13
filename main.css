@@ -692,3 +692,40 @@ input[type="search"] {
     clear: both;
   }
 }
+
+/* --- Social ---------------------- */
+
+.section--social {
+  display: flex;
+  flex-flow: row wrap;
+  background: #202729;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.section--social .col {
+  text-align: center;
+  background-color: rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .section--social {
+    flex-flow: row nowrap;
+  }
+  .section--social .col {
+    width: 50%;
+  }
+}
+
+.section--social .col:first-child {
+  /*background: #202729
+  orange: #e69138
+  green: #63d297*/
+}
+
+.section--social .section__header {
+  text-transform: uppercase;
+  color: #63d297;
+  line-height: 1;
+}
